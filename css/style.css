@@ -1,0 +1,54 @@
+body{
+
+    background-size: cover;
+    font-family: 'Architects Daughter', cursive;
+
+}
+
+html{
+    background: url(../img/opti.jpg)no-repeat center center fixed;
+    height: 100%;
+    background-size: 100% 100%;
+}
+
+.ancho-100 {
+    width: 100%;
+}
+
+.redondo {
+    border-radius: 30px;
+}
+.cincuentaredondo {
+    border-radius: 50px;
+}
+
+
+.input-field input:focus + label {
+    color:purple !important;
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid purple !important;
+    box-shadow: 0 1px 0 0 purple !important;
+}
+
+.cl-black {
+    color:purple;
+}
+
+.card {
+    
+    text-align: center;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.bajar{
+    margin-top: 20px;
+}
+
+hr{
+    height: 2px;
+    background-color: black;
+    width: 95%;
+}
