@@ -68,7 +68,7 @@ class RecetaModel
         $sql.= ' inner join tipo_cristal tc on tc.id_tipo_cristal = receta.tipo_cristal ';
         $sql.= ' inner join cliente cl on cl.rut_cliente = receta.rut_cliente ';
         $sql.= ' inner join usuario us on us.rut = receta.rut_usuario ';
-        $sql.= ' WHERE receta.rut_cliente = :A';
+        $sql.= ' WHERE receta.id_receta=:A';
         $stm = Conexion::conector()->prepare($sql);
         $stm->bindParam(":A", $id);
         $stm->execute();

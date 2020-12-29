@@ -47,10 +47,10 @@ new Vue({
             instance.open();
         },
 
-        generarPDF: function (id){
+        generarPDF: function (id) {
             //alert(id);
-            window.open(this.url+"controllers/ExportarPDF.php?id=" + id, "_blank" );
-        }
+            window.open(this.url + "controllers/ExportarPDF.php?id=" + id, "_blank");
+          },
     },
     created(){}
 });
