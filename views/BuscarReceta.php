@@ -87,6 +87,11 @@ if (isset($_SESSION['user'])) {
                                     <td>
                                         <button @click="abrirModal(r)" class="btn-small purple redondo">Detalle</button>
                                     </td>
+                                        <td>
+                                            <div class="pdf">
+                                                <img @click="generarPDF(r.id)" height="30" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1200px-PDF_file_icon.svg.png" alt="">
+                                            </div>
+                                    </td>
                                 </tr>
                             </table>
                             <div id="modal1" class="modal">
