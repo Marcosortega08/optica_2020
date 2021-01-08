@@ -86,22 +86,66 @@ class ExportarPDF
 
 
         $html = '
-            <h1 style="color:#006400">Reporte de Receta ID' . $receta['id'] . '</h1>
-            <h2>Cliente ' . $receta['nombre_cliente'] . '</h2>
-           
-            <p>Please check the source code documentation and other examples for further information.</p>
-            <table border="1" cellpadding="4">
-                <tr>
-                    <td>Armazón</td>
-                    <td>' . $receta['armazon'] . '</td>
-                </tr>
-                <tr>
-                    <td>Tipo Cristal</td>
-                    <td>' . $receta['tipo_cristal'] . '</td>
-                </tr>
-            </table>        
+        <h2>Receta medica</h2>
+        <br>
+        <h4>datos personales</h4>
+        <p>Nombre del cliente : ' . $receta['nombre_cliente'] . '</p>
+        <p>Numero del cliente : ' . $receta['telefono_cliente'] . '</p>
+        <p>Fecha de entrega : ' . $receta['fecha_entrega'] . '</p>
+        <p>Nombre del vendedor: ' . $receta['nombre_vendedor'] . '</p>
                 
-            ';
+        </div>
+        <hr>
+            <div class="col l6 m6 s12">
+            <h4>Datos del lente</h4>
+                <p>Tipo de lente: ' . $receta['tipo_lente'] . '</p>
+                <p>Tipo de cristal: ' . $receta['tipo_cristal'] . '</p>
+                <p>Material de cristal: ' . $receta['material_cristal'] . '</p>
+                <p>Armazon: ' . $receta['armazon'] . '</p>
+                
+                <p>Prisma: '.$receta['prisma'].'</p>
+                <p>Base: '.$receta['base'].'</p>
+                <p>Distancia pupilar: '.$receta['distancia_pupilar'].'</p>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+           
+        <table border="1" cellpadding="4">
+        
+            <tr>
+                <td><h4>OJO IZQUIERDO</h4></td>
+                <td><h4>OJO DERECHO</h4></td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Esfera: ' . $receta['esfera_oi'] . '</p>
+                    <p>Cilindro: ' . $receta['cilindro_oi'] . '</p>
+                    <p>Eje: ' . $receta['eje_oi'] . '</p>
+                </td>
+                <td>
+                    <p>Esfera: ' . $receta['esfera_od'] . '</p>
+                    <p>Cilindro: ' . $receta['cilindro_od'] . '</p>
+                    <p>Eje: ' . $receta['eje_od'] . '</p>
+                </td>
+            </tr>
+ 
+        </table>
+        <hr>
+        <h4>Observacion</h4>
+        <p>'.$receta['observacion'].'</p>
+        <br><br>
+        
+        <h4>Precio: $'.$receta['precio'].'</h4>
+            
+        
+        
+
+
+
+';
 
         // Print text using writeHTMLCell()
         $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
